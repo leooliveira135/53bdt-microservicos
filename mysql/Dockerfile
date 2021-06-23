@@ -2,6 +2,7 @@ FROM mysql
 
 MAINTAINER Leonardo Oliveira <rm340189@fiap.com.br>
 
+RUN apt-get update
 RUN apt-get install -y curl
 RUN curl https://www.kaggle.com/siropo/spotify-multigenre-playlists-data/download
 RUN unzip archive.zip
