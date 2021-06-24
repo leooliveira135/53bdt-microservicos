@@ -8,7 +8,6 @@ RUN mkdir -p archive
 WORKDIR /archive
 RUN wget https://www.kaggle.com/siropo/spotify-multigenre-playlists-data/download/alternative_music_data.csv
 RUN wget https://www.kaggle.com/siropo/spotify-multigenre-playlists-data/download/blues_music_data.csv
-RUN wget https://www.kaggle.com/siropo/spotify-multigenre-playlists-data/download/blues_music_data.csv
 RUN wget https://www.kaggle.com/siropo/spotify-multigenre-playlists-data/download/hiphop_music_data.csv
 RUN wget https://www.kaggle.com/siropo/spotify-multigenre-playlists-data/download/indie_alt_music_data.csv
 RUN wget https://www.kaggle.com/siropo/spotify-multigenre-playlists-data/download/metal_music_data.csv
