@@ -4,8 +4,8 @@ MAINTAINER Leonardo Oliveira <rm340189@fiap.com.br>
 
 RUN apt-get update
 RUN apt-get install -y wget unzip
-RUN mkdir archive
-RUN cd archive
+RUN mkdir -p archive
+WORKDIR /archive
 RUN wget https://www.kaggle.com/siropo/spotify-multigenre-playlists-data/download/alternative_music_data.csv
 RUN wget https://www.kaggle.com/siropo/spotify-multigenre-playlists-data/download/blues_music_data.csv
 RUN wget https://www.kaggle.com/siropo/spotify-multigenre-playlists-data/download/blues_music_data.csv
@@ -14,5 +14,6 @@ RUN wget https://www.kaggle.com/siropo/spotify-multigenre-playlists-data/downloa
 RUN wget https://www.kaggle.com/siropo/spotify-multigenre-playlists-data/download/metal_music_data.csv
 RUN wget https://www.kaggle.com/siropo/spotify-multigenre-playlists-data/download/pop_music_data.csv
 RUN wget https://www.kaggle.com/siropo/spotify-multigenre-playlists-data/download/rock_music_data.csv
+RUN ls -lha
 
 ADD ./spotify_ddl.sql /docker-entrypoint-initdb.d
