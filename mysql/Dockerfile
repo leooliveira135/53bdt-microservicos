@@ -17,5 +17,9 @@ RUN ls -lha
 
 RUN echo bind-address=0.0.0.0 >> /etc/mysql/conf.d/mysql.cnf
 RUN echo secure-file-priv = "" >> /etc/mysql/conf.d/mysql.cnf
+RUN echo !includedir /etc/mysql/conf.d/ >> /etc/mysql/my.cnf
+RUN echo !includedir /etc/mysql/mysql.conf.d/ >> /etc/mysql/my.cnf
+RUN echo [mysqld] >> /etc/mysql/my.cnf
+RUN echo innodb_buffer_pool_size = 20M``` >> /etc/mysql/my.cnf
 
 ADD ./spotify_ddl.sql /docker-entrypoint-initdb.d
