@@ -3,16 +3,15 @@ services:
   api:
     build: api/.
     ports: 
-      - "4000:5000"
+      - 4000:5000
     depends_on:
       - mysql
 
   mysql:
     build: mysql/.
     ports:
-      - "3306:3306"
-    volumes:
-      - /var/lib/mysql
+      - 3306:3306
     environment:
-      MYSQL_ROOT_PASSWORD: rm340189
+      MYSQL_USER: rm340189
+      MYSQL_ROOT_PASSWORD: leonardo
       MYSQL_DATABASE: 53bdt_db
