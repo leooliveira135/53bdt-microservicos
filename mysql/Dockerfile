@@ -1,4 +1,4 @@
-FROM mysql
+FROM mysql:5.7
 
 MAINTAINER Leonardo Oliveira <rm340189@fiap.com.br>
 
