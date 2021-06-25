@@ -16,6 +16,5 @@ RUN wget https://www.kaggle.com/siropo/spotify-multigenre-playlists-data/downloa
 RUN ls -lha
 
 RUN echo bind-address=0.0.0.0 >> /etc/mysql/conf.d/mysql.cnf
-RUN echo innodb_force_recovery=4 >> /etc/mysql/conf.d/mysql.cnf
 
 ADD ./spotify_ddl.sql /docker-entrypoint-initdb.d
