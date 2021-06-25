@@ -23,9 +23,9 @@ def jsonfyer(obj):
 	if isinstance(obj, (datetime,date)):
 		return obj.isoformat()
 
-@app.route("/Teste")
-def Teste():
-	return "Welcome to teste!"
+@app.route("/")
+def apiHome():
+	return "Welcome to the Spotify Playlist API!"
 
 @app.route("/getAlternative")
 def getAlternative():
