@@ -11,6 +11,9 @@ services:
     build: mysql/.
     ports:
       - 3306:3306
+    volumes:
+      - /var/lib/mysql
+      - /docker-entrypoint-initdb.d/spotify_ddl.sql
     environment:
       MYSQL_USER: rm340189
       MYSQL_PASSWORD: leonardo
