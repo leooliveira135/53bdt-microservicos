@@ -21,4 +21,6 @@ RUN echo !includedir /etc/mysql/mysql.conf.d/ >> /etc/mysql/my.cnf
 RUN echo [mysqld] >> /etc/mysql/my.cnf
 RUN echo innodb_buffer_pool_size = 20M >> /etc/mysql/my.cnf
 
+RUN service mysql start
+
 ADD ./spotify_ddl.sql /docker-entrypoint-initdb.d
