@@ -9,6 +9,9 @@ services:
 
   mysql:
     build: mysql/.
+      args:
+        MYSQL_USER: rm340189
+        MYSQL_PASSWORD: leonardo   
     ports:
       - 3306:3306
     volumes:
@@ -18,7 +21,4 @@ services:
       MYSQL_USER: rm340189
       MYSQL_PASSWORD: leonardo
       MYSQL_ROOT_PASSWORD: fiap
-      MYSQL_DATABASE: 53bdt_db
-    args:
-      MYSQL_USER: rm340189
-      MYSQL_PASSWORD: leonardo    
+      MYSQL_DATABASE: 53bdt_db 
