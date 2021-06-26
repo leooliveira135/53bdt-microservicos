@@ -1,4 +1,4 @@
-FROM mysql:5.7
+FROM mysql:5.6
 
 MAINTAINER Leonardo Oliveira <rm340189@fiap.com.br>
 
@@ -23,4 +23,4 @@ RUN echo innodb_buffer_pool_size = 20M >> /etc/mysql/my.cnf
 
 RUN service mysql start
 
-COPY spotify_ddl.sql /docker-entrypoint-initdb.d/
+ADD spotify_ddl.sql /docker-entrypoint-initdb.d

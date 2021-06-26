@@ -16,4 +16,3 @@ services:
       MYSQL_PASSWORD: leonardo
       MYSQL_ROOT_PASSWORD: fiap
       MYSQL_DATABASE: 53bdt_db
-      MYSQL_ALLOW_EMPTY_PASSWORD: true
