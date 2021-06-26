@@ -25,4 +25,5 @@ RUN service mysql start
 
 ADD spotify_ddl.sql /docker-entrypoint-initdb.d
 ADD mysql_setup.sh /docker-entrypoint-initdb.d
+RUN chmod 777 /docker-entrypoint-initdb.d/mysql_setup.sh
 RUN /docker-entrypoint-initdb.d/mysql_setup.sh
