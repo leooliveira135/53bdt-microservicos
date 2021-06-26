@@ -19,3 +19,6 @@ services:
       MYSQL_PASSWORD: leonardo
       MYSQL_ROOT_PASSWORD: fiap
       MYSQL_DATABASE: 53bdt_db
+    arg:
+      MYSQL_USER: rm340189
+      MYSQL_PASSWORD: leonardo    

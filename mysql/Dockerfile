@@ -22,6 +22,8 @@ RUN echo [mysqld] >> /etc/mysql/my.cnf
 RUN echo innodb_buffer_pool_size = 20M >> /etc/mysql/my.cnf
 
 ADD spotify_ddl.sql /docker-entrypoint-initdb.d
-ADD mysql_setup.sh /docker-entrypoint-initdb.d
-RUN chmod 777 /docker-entrypoint-initdb.d/mysql_setup.sh
-RUN /docker-entrypoint-initdb.d/mysql_setup.sh
+
+ARG MYSQL_USER
+ARG MYSQL_PASSWORD
+
+RUN mysql -u $MYSQL_USER -p$MYSQL_PASSWORD < /docker-entrypoint-initdb.d/spotify_ddl.sql
